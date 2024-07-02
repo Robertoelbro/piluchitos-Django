@@ -1,0 +1,16 @@
+<h1>PRODUCTOS</h1>
+<table>
+	<th>NROPRODUCTO</th><th>NOMBRE</th><th>titulo</th><th>descripcion</th><th>foto</th>
+	<th>marca</th><th>stock</th><th>precio</th><th>fec_salida</th>
+{% for producto in producto %}
+	<tr><td>{{producto.codprod}}</td>
+		<td>{{producto.nombre}}</td>
+		<td>{{producto.titulo}}</td>
+		<td>{{producto.descripcion}}</td>
+		<td>{{producto.foto}}</td>
+		<td>{{producto.marca}}</td>
+		<td>{{producto.stock}}</td>
+		<td>{{producto.precio}}</td>
+		<td>{{producto.fec_salida}}</td></tr>
+{% endfor %}
+</table>

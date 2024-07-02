@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Sweet Pilucho Inc.</title>
+		<link rel="shortcut icon" href="assets/logo_piluchitos-removebg-preview.png">
+		<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+		<link href="bootstrap-3.3.6/dist/css/bootstrap.min.css" rel="stylesheet" media="screen">
+		<!--footer-->
+		<script src="https://kit.fontawesome.com/eb496ab1a0.js" crossorigin="anonymous"></script>
+		<!--creacion del slider-->
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" href="es.css">
+	</head>
+	<body onclick="playaudio()" and onclick="bajarVolumen()">
+		<!--banner-->
+		<header>
+			<div class="logo">
+				<a href="i1.html"><img src="imgs/logo_piluchitos-removebg-preview.png" alt="logopri"></a>
+				<h2 class="nombre-empresa">Piluchitos LTDA</h2>
+			</div>
+			<nav>
+			  <a href="sesion.html" class="navlink">iniciar sesion</a>
+			  <a href="productos.html" class="navlink">productos</a>
+			  <a href="nosotros.html" class="navlink">sobre nosotros</a>
+			  <a href="https://youtu.be/yNCgpaMlOcs"><img src="assets/ShopCart.png" alt="cart" id="cart"></a>
+			  <a href="https://puginarug.com"><button type="button" id="boton" class="btn btn-primary">Ayuda</button></a>
+			</nav>
+		  </header>
+		<!--slider-->
+		<br>
+		<div class="alert alert-info">
+			<strong>Bienvenido</strong> a piluchitos LTDA
+		  </div>
+		<br><br>  
+		<div id="slider">
+			<input type="radio" name="slider" id="slide1" checked>
+			<input type="radio" name="slider" id="slide2">
+			<input type="radio" name="slider" id="slide3">
+			<input type="radio" name="slider" id="slide4">
+			<div id="slides">
+			   <div id="overflow">
+				  <div class="inner">
+					 <div class="slide slide_1">
+						<div class="slide-content">
+						   <img src="assets/Vaporeon.jpg" alt="">
+						</div>
+					 </div>
+					 <div class="slide slide_2">
+						<div class="slide-content">
+						<img src="assets/meowscarada.jpg" alt="">
+						</div>
+					 </div>
+					 <div class="slide slide_3">
+						<div class="slide-content">
+						<img src="assets/Luponny.jpg" alt="">
+						</div>
+					 </div>
+					 <div class="slide slide_4">
+						<div class="slide-content">
+						<img src="assets/gardevoir.webp" alt="">
+						</div>
+					 </div>
+				  </div>
+			   </div>
+			</div>
+			<div id="controls">
+			   <label for="slide1"></label>
+			   <label for="slide2"></label>
+			   <label for="slide3"></label>
+			   <label for="slide4"></label>
+			</div>
+			<div id="bullets">
+			   <label for="slide1"></label>
+			   <label for="slide2"></label>
+			   <label for="slide3"></label>
+			   <label for="slide4"></label>
+			</div>
+		 </div>
+
+		<br>
+		<br>
+
+		<div class="container">
+			<h1 id="tuit">Mantente actualizado a través de twitter</h1>
+			<a class="twitter-timeline" data-lang="es" data-width="500" data-height="400" data-theme="dark" href="https://twitter.com/PokemonCenterUS?ref_src=twsrc%5Etfw">Tweets by PokemonCenterUS</a>
+		</div>
+		
+		<div class="audio">
+			<audio id="musica" loop>
+				<source src="Y2meta.app - Poké Mart [Pokémon_ Ruby & Sapphire] (320 kbps).mp3" type="audio/mpeg">
+				este navegador no acepta formatos de audio
+			</audio>
+		</div>
+
+		 <script>
+			function playaudio(){
+				document.getElementById("musica").play();
+			}
+
+			function bajarVolumen() {
+				var audio = document.getElementById("musica");
+				if (audio.volume > 0) {
+					audio.volume -= 0.9; // Disminuye el volumen en 0.1
+				}
+			}
+		 </script>
+
+		<!--footer-->
+		<footer class="pie-pagina">
+			<div class="grupo-1">
+				<div class="box">
+					<figure>
+						<a href="nosotros.html">
+							<img src="assets/logo piluchitos.png" alt="Logo de piluchitos" id="logo_emp">
+						</a>
+					</figure>
+				</div>
+				<div class="box">
+					<h3>Medios de contacto</h3>
+					<p>Telefono:+569 4429 3966 </p>
+					<p>Correo electronico: contacto.piluchitos@gmail.com</p>
+				</div>
+				<div class="box">
+					<h3>Siguenos</h3>
+					<div class="red-social">
+						<a href="https://web.facebook.com" class="fa fa-facebook"></a>
+						<a href="https://www.instagram.com" class="fa fa-instagram"></a>
+						<a href="https://twitter.com" class="fa fa-twitter"></a>
+						<a href="https://www.youtube.com" class="fa fa-youtube"></a>
+					</div>
+				</div>
+			</div>
+			<div class="grupo-2">
+				<small>&copy; 2024 <b>Piluchitos</b> - Todos los Derechos Reservados.</small>
+			</div>
+		</footer>
+
+		<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+	</body>
+</html>
