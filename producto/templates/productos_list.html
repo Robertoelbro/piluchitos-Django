@@ -1,0 +1,57 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="{% static 'css/registro producto.css' %}">
+  <title>Productos</title>
+</head>
+<body>
+    <h1 style="color: white;">PRODUCTOS</h1>
+    {% if msg %}
+        {{ msg }} <br>
+    {% endif %}
+    <button>
+        <a href="{% url 'ingreso_producto' %}">Agregar</a>
+    </button>
+
+    <table style="color: white;">
+        <thead>
+            <tr>
+                <th>NROPRODUCTO</th>
+                <th>NOMBRE</th>
+                <th>TITULO</th>
+                <th>DESCRIPCION</th>
+                <th>FOTO</th>
+                <th>MARCA</th>
+                <th>STOCK</th>
+                <th>PRECIO</th>
+                <th>FEC_SALIDA</th>
+                <th>ACCIONES</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for producto in productos %}
+                <tr>
+                    <td>{{ producto.codprod }}</td>
+                    <td>{{ producto.nombre }}</td>
+                    <td>{{ producto.titulo }}</td>
+                    <td>{{ producto.descripcion }}</td>
+                    <td><img src="{{ producto.foto.url }}" alt="{{ producto.nombre }}" width="100"></td>
+                    <td>{{ producto.marca }}</td>
+                    <td>{{ producto.stock }}</td>
+                    <td>{{ producto.precio }}</td>
+                    <td>{{ producto.fec_salida }}</td>
+                    <td>
+                        <a href="{% url 'modifica_producto' producto.codprod %}" style="color: white;">Modificar</a> |
+                        <a href="{% url 'borra_producto' producto.codprod %}" style="color: white;">Eliminar</a>
+                    </td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    <br><a href="{% url 'i1' %}"><button>Volver</button></a>
+</body>
+</html>

@@ -1,0 +1,28 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="{% static 'css/registro producto.css' %}">
+  <title style="color: white;">Lista marcas</title>
+</head>
+<h1 style="color: white;">DESPLIEGE DE MARCAS</h1>
+<button>
+	<a href="{% url 'inserta_marca' %}" style="color: white;">Agregar</a>
+</button>
+
+<table style="color: white;">
+	<th>CODIGO</th>
+	<th>NOMBRE</th>
+{% for ma in marca %}
+	<tr>
+		<td>{{ma.id_marca}}</td>
+		<td>{{ma.marca}}</td>
+		<td><a href="{% url 'modifica_marca' pk=ma.id_marca%}" style="color: white;">Modificar</a></td>
+		<td><a href="{% url 'borra_marca' pk=ma.id_marca%}" style="color: white;">Eliminar</a></td>
+	</tr>
+{% endfor %}
+</table>
+<br><a href="{% url 'i1' %}"><button>Volver</button></a>

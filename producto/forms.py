@@ -8,7 +8,7 @@ class MarcaForm(ModelForm):
         model = Marca
         fields = "__all__"
 
-class ProductoForm(ModelForm):
+class ProductoForm(forms.ModelForm):
     class Meta:
         model = Producto
-        fields = "__all__"
+        fields = ['codprod', 'nombre', 'titulo', 'descripcion','foto','marca','stock','precio','fec_salida']
