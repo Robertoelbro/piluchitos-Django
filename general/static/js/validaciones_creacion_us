@@ -1,0 +1,85 @@
+const form = document.getElementById("form");
+const email = document.getElementById("correo");
+const pass = document.getElementById("contraseña");
+const nombres = document.getElementById("nombres");
+const apellidos =document.getElementById("apellidos");
+const terminos = document.querySelector('input[name="terminos"]:checked')
+const submitBtn = document.getElementById("submitBtn");
+
+submitBtn.addEventListener("click", function() {
+    console.log("El botón de inicio de sesión se ha hecho clic");
+    let entrar = false;
+    const regexEmail = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,4})+$/;
+    let alertShown = false;
+
+    checkProvider();
+    function checkProvider()
+    {
+       let check = document.querySelector('input[name="terminos"]:checked')
+       if(check !== null) console.log('terminos', check);
+       if (!alertShown) {
+        alert("Por favor, ingrese su nombre");
+        alertShown = true;
+    }
+    }
+    if (nombres.value.trim() === "") {
+        if (!alertShown) {
+            alert("Por favor, ingrese su nombre");
+            alertShown = true;
+        }
+        entrar = true;
+    }
+    if (nombres.value.length <= 2) {
+        if (!alertShown) {
+            alert("la longitud del nombre debe ser mayor a 2");
+            alertShown = true;
+        }
+    }
+    if (apellidos.value.trim() === "") {
+        if (!alertShown) {
+            alert("Por favor, ingrese su apellido");
+            alertShown = true;
+        }
+        entrar = true;
+    }
+    if (apellidos.value.length <= 3) {
+        if (!alertShown) {
+            alert("la longitud del apellido debe ser mayor a 3");
+            alertShown = true;
+        }
+    }
+
+    if (!regexEmail.test(email.value)) {
+        if (!alertShown) {
+            alert("El email no es valido");
+            alertShown = true;
+        }
+        entrar = true;
+    }
+    if (email.value.trim() === "") {
+        if (!alertShown) {
+            alert("Por favor, ingrese su correo electrónico");
+            alertShown = true;
+        }
+        entrar = true;
+    }
+    if (pass.value.trim() === "") {
+        if (!alertShown) {
+            alert("Por favor, ingrese su contraseña");
+            alertShown = true;
+        }
+        entrar = true;
+    }
+    if (pass.value.length < 8) {
+        if (!alertShown) {
+            alert("La contraseña debe tener al menos 8 caracteres");
+            alertShown = true;
+        }
+        entrar = true;
+    }
+
+    if (entrar) {
+    } else {
+        window.location.href = "sesion.html";
+    }
+});

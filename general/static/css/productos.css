@@ -1,0 +1,234 @@
+/*banner*/
+#cart {
+    width: 50px;
+}
+
+header{
+    color: white;
+    display: flex;
+    min-height: 70px;
+    background-color: #002a4f;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+  }
+  
+  .logo{
+    display: flex;
+    align-items: center;
+  }
+  
+  .logo img{
+    height: 50px;
+    margin-right: 0px;
+  }
+  
+#a{
+    color: white;
+}
+
+  a{
+    text-decoration: none;
+    color: white;
+  }
+  
+  nav a{
+    text-decoration: none;
+    color: white;
+    font-weight: 600;
+    padding-right: 10px;
+  }
+  
+  nav a:hover{
+    color:gray;
+    text-decoration: underline;
+  }
+  
+  @media (max-width:700px){
+    header{
+        flex-direction: column;
+    }
+    nav{
+        padding: 10px 0px;
+        color: white;
+    }
+  }
+ 
+ h1{
+    color: aqua;
+    
+ }
+ 
+ h2 {
+    color: white;
+    text-align: center;
+    font-size: 2rem;
+    padding-left: 10px;
+ }
+ 
+
+/* Seccion de seleccion productos */
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+  background-image: url('/static/img/fondo.jpg');
+    background-size: cover;
+    position: relative
+ }
+ 
+ body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: -1;
+ }
+
+h3{
+    padding-top: 10px;
+    padding-bottom: 10px;
+    text-align: center;
+}
+
+.row{
+    display: flex;
+
+}
+
+.row button{
+    width: 200px;
+
+}
+
+.row img{
+    width: 180px;
+}
+
+#peluchifoto{
+    width: 350px;
+    display: flex;
+}
+
+#nompro{
+    font-size: large;
+}
+
+#prepro{
+    font-size: small;
+}
+
+.btn-light{
+    border-radius: 20px;
+}
+
+.modal-body button{
+    width: 200px;
+    height: 50px;
+}
+
+.container{
+  display:grid;
+  text-align: center;
+}
+
+/* footer */
+
+footer {
+    position: relative;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+  }
+  
+  @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
+  *{
+     margin: 0;
+     padding: 0;
+     box-sizing: border-box;
+     font-family: 'Open Sans', sans-serif;
+  }
+  .pie-pagina{
+     width: 100%;
+     background-color: #002a4f;
+  }
+  .pie-pagina .grupo-1{
+     width: 100%;
+     max-width: 1200px;
+     margin: auto;
+     display:grid;
+     grid-template-columns: repeat(3, 1fr);
+     grid-gap:50px;
+     padding: 45px 0px;
+  }
+  .pie-pagina .grupo-1 .box figure{
+     width: 100%;
+     height: 100%;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+  }
+  .pie-pagina .grupo-1 .box figure img{
+     width: 250px;
+  }
+  .pie-pagina .grupo-1 .box h3{
+     color: #fff;
+     margin-bottom: 25px;
+     font-size: 20px;
+  }
+  .pie-pagina .grupo-1 .box p{
+     color: #efefef;
+     margin-bottom: 10px;
+  }
+  .pie-pagina .grupo-1 .red-social a{
+     display: inline-block;
+     text-decoration: none;
+     width: 45px;
+     height: 45px;
+     line-height: 45px;
+     color: #fff;
+     margin-right: 10px;
+     background-color: #0d2033;
+     text-align: center;
+     transition: all 300ms ease;
+  }
+  .pie-pagina .grupo-1 .red-social a:hover{
+     color: aqua;
+  }
+  .pie-pagina .grupo-2{
+    width: 100%;
+    height: 100%;
+     background-color: #0a1a2a;
+     padding: 15px 10px;
+     text-align: center;
+     color: #fff;
+  }
+  .pie-pagina .grupo-2 small{
+     font-size: 15px;
+  }
+  @media screen and (max-width:800px){
+     .pie-pagina .grupo-1{
+         width: 90%;
+         grid-template-columns: repeat(1, 1fr);
+         grid-gap:30px;
+         padding: 35px 0px;
+     }
+  }
+
+  #nuestros_p {
+    background-color: burlywood;
+    border-radius: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    text-align: center;
+  }

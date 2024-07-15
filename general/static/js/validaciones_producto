@@ -1,0 +1,76 @@
+const form = document.getElementById("form");
+const file = document.getElementById("imagen_producto");
+const text = document.getElementById("nombre_producto");
+const textarea = document.getElementById("desc_producto");
+const precio = document.getElementById("precio_producto");
+const stock = document.getElementById("stock");
+const date = document.getElementById("fecha");
+
+
+const submitBtn = document.getElementById("submitBtn");
+
+submitBtn.addEventListener("click", function() {
+    console.log("El botón de inicio de sesión se ha hecho clic");
+    let entrar = false;
+    let alertShown = false;
+
+    let seleccionado = false;
+
+    if (file.files.length === 0) {
+        if (!alertShown) {
+            alert("Por favor, seleccione una imagen para el producto");
+            alertShown = true;
+        }
+        entrar = true;
+    }
+
+    if (text.value.trim() === "") {
+        if (!alertShown) {
+            alert("Por favor, ingrese el nombre del producto");
+            alertShown = true;
+        }
+        entrar = true;
+    }
+    if (textarea.value.trim() === "") {
+        if (!alertShown) {
+            alert("Por favor, ingrese la descripcion del producto");
+            alertShown = true;
+        }
+        entrar = true;
+    }
+    if (precio.value.trim() === "") {
+        if (!alertShown) {
+            alert("Por favor, ingrese el precio del producto");
+            alertShown = true;
+        }
+        entrar = true;
+    }
+    if (stock.value.trim() === "") {
+        if (!alertShown) {
+            alert("Por favor, ingrese el stock");
+            alertShown = true;
+        }
+        entrar = true;
+    }
+
+    const radiobutton = document.querySelectorAll('input[name="opcion"]');
+
+    for (let i = 0; i < radiobutton.length; i++) {
+        if (radiobutton[i].checked) {
+        seleccionado = true;
+        break;
+        }
+    }
+    if (!seleccionado) {
+        if (!alertShown) {
+            alert("Por favor, seleccione una marca");
+            alertShown = true;
+        }
+        entrar = true;
+    }
+
+    if (entrar) {
+    } else {
+        window.location.href = "ingreso_producto.html";
+    }
+});

@@ -1,0 +1,23 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="shortcut icon" href="{% static 'img/icono.png' %}">
+  <link rel="stylesheet" href="{% static 'css/registro producto.css' %}">
+  <title>Formulario Registro</title>
+</head>
+<body>
+  <form action="{% url 'i1' %}" method= "get">
+  <section class="form-register">
+    {% block content %}
+    {% endblock %}
+    <p><a href="{% url 'creacion' %}">¿no tienes una cuenta? ¡crea una ya!</a></p>
+  </section>
+</form>
+
+<script src="{% static 'validacion_sesion' %}"></script>
+</body>
+</html>
