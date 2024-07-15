@@ -6,4 +6,7 @@ from django.urls import path
 from . import views
 
 urlpatterns = [
+    path('home', views.home, name='home'),
+    path('chao', views.chao, name='chao'),
+    path('registro', views.registro, name='registro'),
 ]
